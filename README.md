@@ -10,5 +10,5 @@ crack it with hashcat
 `pyhton3 dump.py`
 or as oneliner
 ```bash
-python3 -c "from pykeepass import PyKeePass; print(PyKeePass('Database.kdbx', password='masterpassword').entries)"
+python3 -c "from pykeepass import PyKeePass; print([f'{entry.title} = {entry.username}:{entry.password}' for entry in PyKeePass('Database.kdbx', password='mercedes1').entries])"
 ```
